@@ -3,6 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'checkstyle'
+	id 'pmd'
 }
 
 group = 'com.example'
@@ -35,4 +36,11 @@ checkstyle {
 	maxWarnings = 0
 	toolVersion = '9.2.1'
 	getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
+}
+
+pmd {
+	consoleOutput = true
+	toolVersion = "6.45.0"
+	ruleSets = []
+	ruleSetFiles = files("config/pmd/ruleset.xml")
 }
