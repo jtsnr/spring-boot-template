@@ -4,6 +4,7 @@ plugins {
 	id 'java'
 	id 'checkstyle'
 	id 'pmd'
+	id 'jacoco'
 }
 
 group = 'com.example'
@@ -43,4 +44,8 @@ pmd {
 	toolVersion = "6.45.0"
 	ruleSets = []
 	ruleSetFiles = files("config/pmd/ruleset.xml")
+}
+
+jacocoTestReport {
+	dependsOn test // tests are required to run before generating the report
 }
