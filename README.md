@@ -40,3 +40,25 @@ To build the project execute:
 ```bash
 ./gradlew build
 ```
+
+## Running
+The application can be run using either Gradle:
+```bash
+./gradlew bootRun
+```
+
+or with Docker:
+```bash
+./gradlew assemble
+
+docker-compose build
+
+docker-compose up
+```
+
+This will start the application on port 8080.
+
+There is an application health endpoint at
+```bash
+curl http://localhost:8080/actuator/health
+```

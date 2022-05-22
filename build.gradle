@@ -62,3 +62,11 @@ dependencyCheck {
 }
 
 check.dependsOn dependencyCheckAnalyze
+
+bootJar {
+	archiveFileName = "spring-boot-template.jar"
+
+	manifest {
+		attributes('Implementation-Version': project.version.toString())
+	}
+}

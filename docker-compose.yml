@@ -1,0 +1,9 @@
+version: "2.1"
+
+services:
+  spring-boot-template:
+    build:
+      context: .
+    image: jtsnr/spring-boot-template
+    ports:
+      - "8080:8080"
