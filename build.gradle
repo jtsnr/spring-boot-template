@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.7.0'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'checkstyle'
 }
 
 group = 'com.example'
@@ -28,4 +29,10 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+checkstyle {
+	maxWarnings = 0
+	toolVersion = '9.2.1'
+	getConfigDirectory().set(new File(rootDir, 'config/checkstyle'))
 }
