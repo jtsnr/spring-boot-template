@@ -25,6 +25,8 @@ The report is output to _$buildDir/reports/jacoco_.
 ### Version Updates
 This project uses [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates) to check for version updates of project dependent libraries.
 
+Dependabot will automatically create a pull request when it identifies there are new versions available.
+
 ### OWASP Dependency-Check
 This project uses [OWASP Dependency-Check plugin](https://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html) to check the project dependent libraries for known vulnerabilities.
 
@@ -36,6 +38,9 @@ To perform the checks execute:
 The checks are also executed as part of the `gradle check` task.
 
 A report is output to _$buildDir/reports/dependency-check-report.html_
+
+## Continuous Integration
+This project uses a [Java Gradle CI](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle) GitHub workflow to build and test the project on any pull request or commit to main.
 
 ## Building
 This project uses [Gradle](https://gradle.org/) as a build tool.
