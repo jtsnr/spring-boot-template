@@ -20,6 +20,11 @@ To generate the code coverage report execute:
 
 The report is output to _$buildDir/reports/jacoco_.
 
+## Dependencies
+
+### Version Updates
+This project uses [Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates) to check for version updates of project dependent libraries.
+
 ### OWASP Dependency-Check
 This project uses [OWASP Dependency-Check plugin](https://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html) to check the project dependent libraries for known vulnerabilities.
 
