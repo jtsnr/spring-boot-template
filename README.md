@@ -20,6 +20,18 @@ To generate the code coverage report execute:
 
 The report is output to _$buildDir/reports/jacoco_.
 
+### OWASP Dependency-Check
+This project uses [OWASP Dependency-Check plugin](https://jeremylong.github.io/DependencyCheck/dependency-check-gradle/index.html) to check the project dependent libraries for known vulnerabilities.
+
+To perform the checks execute:
+```bash
+./gradlew dependencyCheckAnalyze
+```
+
+The checks are also executed as part of the `gradle check` task.
+
+A report is output to _$buildDir/reports/dependency-check-report.html_
+
 ## Building
 This project uses [Gradle](https://gradle.org/) as a build tool.
 

@@ -5,7 +5,8 @@ plugins {
 	id 'checkstyle'
 	id 'pmd'
 	id 'jacoco'
-}
+	id 'org.owasp.dependencycheck' version '7.1.0.1'
+ }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
@@ -49,3 +50,15 @@ pmd {
 jacocoTestReport {
 	dependsOn test // tests are required to run before generating the report
 }
+
+dependencyCheck {
+	failBuildOnCVSS = 0
+	suppressionFile = 'config/owasp/suppressions.xml'
+	skipConfigurations = [
+		"checkstyle",
+		"compileOnly",
+		"pmd"
+	]
+}
+
+check.dependsOn dependencyCheckAnalyze
